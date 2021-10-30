@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+    pusher_service:
+        build:
+            context: ./nest-pusher
+            dockerfile: Dockerfile
+        image: rm-app/pusher-gateway:1.0.2
+        environment:
+            - APP_ID=
+            - APP_KEY=
+            - APP_SECRET=
+            - APP_CLUSTER=
+        ports: 
+            - 3001:3001
+       
